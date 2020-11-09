@@ -1,0 +1,56 @@
+[System]
+Name='FERI'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=11
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='FAQI'
+Range=[0 500]
+NumMFs=6
+MF1='Good':'trapmf',[0 0 40 60]
+MF2='Moderate':'trapmf',[40 60 90 110]
+MF3='Unhealthy-For-Sensetive':'trapmf',[90 110 140 160]
+MF4='Unhealthy':'trapmf',[140 160 190 210]
+MF5='Very-Unhealthy':'trapmf',[190 210 280 320]
+MF6='Hazardous':'trapmf',[280 320 500 500]
+
+[Input2]
+Name='WWQI'
+Range=[0 500]
+NumMFs=5
+MF1='Good':'trapmf',[0 0 40 60]
+MF2='Moderate':'trapmf',[40 60 90 110]
+MF3='Bad':'trapmf',[90 110 180 220]
+MF4='Very-Bad':'trapmf',[180 220 280 320]
+MF5='Hazardous':'trapmf',[280 320 500 500]
+
+[Output1]
+Name='FEQI'
+Range=[0 500]
+NumMFs=5
+MF1='Low-Risk':'trapmf',[0 0 40 60]
+MF2='Moderate-Risk':'trapmf',[40 60 90 110]
+MF3='Relatively-High-Risk':'trapmf',[90 110 180 220]
+MF4='High-Risk':'trapmf',[180 220 280 320]
+MF5='Very-High-Risk':'trapmf',[280 320 500 500]
+
+[Rules]
+1 0, 1 (0.6) : 1
+2 0, 2 (0.6) : 1
+3 0, 3 (0.6) : 1
+4 0, 3 (0.6) : 1
+5 0, 4 (0.6) : 1
+6 0, 5 (0.6) : 1
+0 1, 1 (0.4) : 1
+0 2, 2 (0.4) : 1
+0 3, 3 (0.4) : 1
+0 4, 4 (0.4) : 1
+0 5, 5 (0.4) : 1

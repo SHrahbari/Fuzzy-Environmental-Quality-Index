@@ -1,0 +1,122 @@
+++++++++++++++++++++++++++++++Criteria AQI+++++++++++++++++++++++++++
+
+Figure 1 represents the Criteria Air Quality Index FIS  
+
+The Calculated Fuzzy Criteria AQI =  
+
+  141.70 
+
+Figure 2 illustrates the Membership Functions in Criteria AQI  
+
+Total level of Criteria AQI in Zone is:  
+
+Unhealthy For Sensetive Group 
+
+The Dominant Pollutant of Criteria AQI in Zone is:  
+
+SO2
+
+
+
+
+
+
+
+++++++++++++++++++++++++++++++BTEXHQI+++++++++++++++++++++++++++
+
+Figure 3 represents the BTEXH Air Quality Index FIS  
+
+The Calculated Fuzzy BTEXHQI is =  
+
+  266.20 
+
+Figure 4 illustrates the Membership Functions in BTEXHQI 
+
+Total level of outBTEXHQI in Zone is:  
+
+Very Unhealthy 
+
+
+The Dominant Pollutant of BTEXHQI in Zone is:  
+
+
+Toluene 
+
+
+
+
+
+
+++++++++++++++++++++++++++++++FAQI+++++++++++++++++++++++++++
+
+Figure 5 represents the Fuzzy Air Quality Index FIS  
+
+The Calculated FAQI is=  
+
+  200.49 
+
+Figure 6 illustrates the Membership Functions in FAQI  
+
+Total level of outFAQI in Zone is:  
+
+Very Unhealthy 
+
+
+Figure 7 represents the Surface Viewe of FAQI   
+
+The Dominant Pollutant of FAQI in Zone is:  
+
+BTEXHQI 
+
+
+
+
+
+
+
+++++++++++++++++++++++++++++++FWWQI+++++++++++++++++++++++++++
+
+Figure 8 represents the Fuzzy WateWater Quality Index FIS  
+
+The Calculated Fuzzy  WWQI =  
+
+   48.85 
+
+Figure 9 illustrates the Membership Functions in FWWQI 
+
+Total level of outFWWQI in Zone is:  
+
+GOOD   
+
+
+The Dominant Pollutant of FWWQI in Zone is:  
+
+BOD 
+
+
+
+
+
+
+
+++++++++++++++++++++++++++++++FERI+++++++++++++++++++++++++++
+
+Figure 10 represents the Fuzzy Environmental Risk Index FIS  
+
+The Calculated FERI =  
+  168.78 
+
+Figure 11 illustrates the Membership Functions in FERI 
+
+Total level of outFERI in Zone is:  
+
+RELATIVELY HIGH RISK   
+
+
+Figure 12 represents the Surface viewe of Fuzzy Environmental Risk Index 
+
+The Dominant Pollutant of FERI in Zone is:  
+
+FAQI  
+
+

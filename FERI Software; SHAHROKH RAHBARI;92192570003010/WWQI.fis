@@ -1,0 +1,90 @@
+[System]
+Name='WWQI'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=24
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='TSS-Outfall'
+Range=[0 200]
+NumMFs=5
+MF1='Good-Quality':'trapmf',[0 0 18 22]
+MF2='Moderate-Quality':'trapmf',[18 22 38 42]
+MF3='Bad-Quality':'trapmf',[38 42 76 84]
+MF4='Very-Bad-Quality':'trapmf',[76 84 116 124]
+MF5='Hazardous':'trapmf',[116 124 200 200]
+
+[Input2]
+Name='COD-Outfall'
+Range=[0 300]
+NumMFs=5
+MF1='Good-Quality':'trapmf',[0 0 27 33]
+MF2='Moderate-Quality':'trapmf',[27 33 57 63]
+MF3='Bad-Quality':'trapmf',[57 63 114 126]
+MF4='Very-Bad-Quality':'trapmf',[114 126 174 186]
+MF5='Hazardous':'trapmf',[174 186 300 300]
+
+[Input3]
+Name='BOD-Ouatfall'
+Range=[0 150]
+NumMFs=5
+MF1='Good-Quality':'trapmf',[0 0 13 17]
+MF2='Moderate-Quality':'trapmf',[13 17 28 32]
+MF3='Bad-Quality':'trapmf',[28 32 57 63]
+MF4='Very-Bad-Quality':'trapmf',[57 63 87 93]
+MF5='Hazardous':'trapmf',[87 93 150 150]
+
+[Input4]
+Name='pH-Outfall'
+Range=[0 14]
+NumMFs=7
+MF1='Good-Quality':'trapmf',[6.3 6.7 8.3 8.7]
+MF2='Acid-Moderate-Quality':'trapmf',[5.3 5.7 6.3 6.7]
+MF3='Base-Moderate-Quality':'trapmf',[8.3 8.7 9.3 9.7]
+MF4='Acid-Bad-Quality':'trapmf',[3.3 3.7 5.3 5.7]
+MF5='Base-Bad-Quality':'trapmf',[9.3 9.7 11.3 11.7]
+MF6='Acid-Hazardous':'trapmf',[0 0 3.3 3.7]
+MF7='Base-Hazardous':'trapmf',[11.3 11.7 14 14]
+
+[Output1]
+Name='Wastewater-Quality-Index'
+Range=[0 500]
+NumMFs=5
+MF1='Good-WWQI':'trapmf',[0 0 40 60]
+MF2='Moderate-WWQI':'trapmf',[40 60 90 110]
+MF3='Bad-WWQI':'trapmf',[90 110 180 220]
+MF4='Very-Bad-WWQI':'trapmf',[180 220 280 320]
+MF5='Hazardous-WWQI':'trapmf',[280 320 500 500]
+
+[Rules]
+1 0 0 0, 1 (1) : 1
+2 0 0 0, 2 (1) : 1
+3 0 0 0, 3 (1) : 1
+4 0 0 0, 4 (1) : 1
+5 0 0 0, 5 (1) : 1
+0 1 0 0, 1 (1) : 1
+0 2 0 0, 2 (1) : 1
+0 3 0 0, 3 (1) : 1
+0 4 0 0, 4 (1) : 1
+0 5 0 0, 5 (1) : 1
+0 0 1 0, 1 (1) : 1
+0 0 2 0, 2 (1) : 1
+0 0 3 0, 3 (1) : 1
+0 0 4 0, 4 (1) : 1
+0 0 5 0, 5 (1) : 1
+0 0 0 1, 1 (1) : 1
+0 0 0 2, 2 (1) : 1
+0 0 0 3, 2 (1) : 1
+0 0 0 4, 3 (1) : 1
+0 0 0 4, 4 (1) : 1
+0 0 0 5, 3 (1) : 1
+0 0 0 5, 4 (1) : 1
+0 0 0 6, 5 (1) : 1
+0 0 0 7, 5 (1) : 1

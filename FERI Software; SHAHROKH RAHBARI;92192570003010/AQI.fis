@@ -1,0 +1,110 @@
+[System]
+Name='AQI'
+Type='mamdani'
+Version=2.0
+NumInputs=5
+NumOutputs=1
+NumRules=30
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='CO(ppm)'
+Range=[0 50.4]
+NumMFs=6
+MF1='Good':'trapmf',[0 0 3.9 5]
+MF2='Moderate':'trapmf',[3.9 5 9 10]
+MF3='Unhealthy-Sens-Group':'trapmf',[9.2 9.8 12 12.8]
+MF4='Unhealthy':'trapmf',[12 12.8 15 15.8]
+MF5='Very-Healthy':'trapmf',[14 16.8 29 31.9]
+MF6='Hazardous':'trapmf',[28 32 51.4 51.4]
+
+[Input2]
+Name='NO2(ppb)'
+Range=[0 2040]
+NumMFs=6
+MF1='Good':'trapmf',[0 0 40 60]
+MF2='Moderate':'trapmf',[40 60 90 110]
+MF3='Unhealthy-Sens-Group':'trapmf',[75 125 335 385]
+MF4='Unhealthy':'trapmf',[335 385 615 665]
+MF5='Very-Unhealthy':'trapmf',[615 748 1140 1340]
+MF6='Hazardous':'trapmf',[1140 1340 2040 2040]
+
+[Input3]
+Name='SO2(ppb)'
+Range=[0 1004]
+NumMFs=6
+MF1='Good':'trapmf',[0 0 27 41]
+MF2='Moderate':'trapmf',[27 41 123 163]
+MF3='Hazardous':'trapmf',[570 630 1004 1004]
+MF4='Unhealthy-Sens-Group':'trapmf',[123 163 214 234]
+MF5='Unhealthy':'trapmf',[214 234 290 310]
+MF6='Very-Unhealthy':'trapmf',[290 310 570 630]
+
+[Input4]
+Name='O3(ppb)'
+Range=[0 600]
+NumMFs=6
+MF1='Good':'trapmf',[0 0 50 90]
+MF2='Moderate':'trapmf',[50 90 115 135]
+MF3='Unhealthy-Sens-Group':'trapmf',[115 135 155 175]
+MF4='Unhealthy':'trapmf',[155 175 190 210]
+MF5='Very-Unhealthy':'trapmf',[190 210 380 430]
+MF6='Hazardous':'trapmf',[380 430 600 600]
+
+[Input5]
+Name='PM2.5(micg/m3)'
+Range=[0 500.4]
+NumMFs=6
+MF1='Good':'trapmf',[0 0 12 18]
+MF2='Moderate':'trapmf',[12.0215028901734 18.0215028901734 31.0215028901734 39.0215028901734]
+MF3='Unhealthy-Sens-Group':'trapmf',[31 39 61 69]
+MF4='Unhealthy':'trapmf',[61 69 140 160]
+MF5='Very-Unhealthy':'trapmf',[140 160 230 270]
+MF6='Hazardous':'trapmf',[230 270 500.4 500.4]
+
+[Output1]
+Name='AQI'
+Range=[0 500]
+NumMFs=6
+MF1='Good':'trapmf',[0 0 40 60]
+MF2='Moderate':'trapmf',[40 60 90 110]
+MF3='Unhealthy-sens-group':'trapmf',[90 110 140 160]
+MF4='Unhealthy':'trapmf',[140 160 190 210]
+MF5='Very-Unhealthy':'trapmf',[190 210 280 320]
+MF6='Hazardous':'trapmf',[280 320 500 500]
+
+[Rules]
+0 0 0 0 1, 1 (0.29) : 1
+0 0 0 0 2, 2 (0.29) : 1
+0 0 0 0 3, 3 (0.29) : 1
+0 0 0 0 4, 4 (0.29) : 1
+0 0 0 0 5, 5 (0.29) : 1
+0 0 0 0 6, 6 (0.29) : 1
+0 1 0 0 0, 1 (0.25) : 1
+0 2 0 0 0, 2 (0.25) : 1
+0 3 0 0 0, 3 (0.25) : 1
+0 4 0 0 0, 4 (0.25) : 1
+0 5 0 0 0, 5 (0.25) : 1
+0 6 0 0 0, 6 (0.25) : 1
+0 0 0 1 0, 1 (0.18) : 1
+0 0 0 2 0, 2 (0.18) : 1
+0 0 0 3 0, 3 (0.18) : 1
+0 0 0 4 0, 4 (0.18) : 1
+0 0 0 5 0, 5 (0.18) : 1
+0 0 0 6 0, 6 (0.18) : 1
+1 0 0 0 0, 1 (0.14) : 1
+2 0 0 0 0, 2 (0.14) : 1
+3 0 0 0 0, 3 (0.14) : 1
+4 0 0 0 0, 4 (0.14) : 1
+5 0 0 0 0, 5 (0.14) : 1
+6 0 0 0 0, 6 (0.14) : 1
+0 0 1 0 0, 1 (0.14) : 1
+0 0 2 0 0, 2 (0.14) : 1
+0 0 4 0 0, 3 (0.14) : 1
+0 0 5 0 0, 4 (0.14) : 1
+0 0 6 0 0, 5 (0.14) : 1
+0 0 3 0 0, 6 (0.14) : 1
